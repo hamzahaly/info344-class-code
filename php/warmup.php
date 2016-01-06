@@ -8,13 +8,15 @@ $months = array();
 
 for ($i = 1; $i <= 12; $i++) {
 	$months[$i] = date(F, mktime(0, 0, 0, $i));
-	echo "$months[$i] ";
+	echo "$months[$i]\n";
 }
-sort($months);
 
-for ($i = 1; $i <= 12; $i++) {
-	$months[$i] = date(F, mktime(0, 0, 0, $i));
-	echo "$months[$i] ";
+sort($months);
+echo "----\n";
+
+foreach($months as $m) {
+	echo "$m\n";
 }
+
 
 ?>

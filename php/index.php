@@ -1,7 +1,7 @@
 <?php 
 $url = parse_url($_SERVER['REQUEST_URI']);
 $name = substr($url['path'], 1);
-if (strlen($name) ==0) {
+if (strlen($name) == 0) {
 	$name = 'World';
 }
 ?>
