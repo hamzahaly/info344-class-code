@@ -1,0 +1,13 @@
+Logical System Architecture
+1. Presentation
+2. Authentication
+3. Data/Template Merging
+4. Validation, Authorization, Rules, and Notificatins
+5. Data Storage and Retrieval
+
+Don't do anything on client all on the server
+Merge Data with HTML on the Server then deliver to the Client
+
+Structured data being sent back and forth between web server and client
+
+Single quote in PHP is all literal
