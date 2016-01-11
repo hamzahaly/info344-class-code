@@ -6,8 +6,8 @@ class Messages {
 		$this->dbconn = $dbconn;
 	}
 	
-	public function search($q) {
-		$sql = 'select * from info344chat where message';
+	public function sendMessage($q) {
+		$sql = 'select * from info344chat order by ascending';
 		$stmt = $this->dbconn->prepare($sql);
 		$success = $stmt->execute(array($q,$q));
 		if (!$success) {
