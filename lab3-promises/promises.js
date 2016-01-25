@@ -37,14 +37,33 @@ function get(url) {
 };
 
 function getMovie(movieId) {
-	var promise = new Promise(function(resolve, reject) {
-		resolve(movieId);
-	})
-	promise.then(function(movieId) {
-		
-	}).then(function(movieId) {
-		
+	get("http://www.omdbapi.com/?i=" + movieId + "&plot=short&r=json")
+	.then(function(results) {
+		console.log(JSON.parse(results));
 	}).catch(function(err) {
-		
+		console.log(err);
 	})
 };
+
+getMovie('tt0120737')
+
+function getThreeMovies(id1, id2, id3) {
+	get("http://www.omdbapi.com/?i=" + id1 + "&plit=short&r=json")
+	.then(function(results) {
+		console.log(JSON.parse(results));
+		return get("http://www.omdbapi.com/?i=" + id2 + "&plit=short&r=json")
+	})
+	.then(function(results) {
+		console.log(JSON.parse(results));
+		return get("http://www.omdbapi.com/?i=" + id3 + "&plit=short&r=json")
+	})
+	.then(function(results) {
+		console.log(JSON.parse(results));
+	})
+	.catch(function(err) {
+		console.log(err);
+	});
+};
+
+
+getThreeMovies('tt0120737', 'tt0120738', 'tt0120740');
