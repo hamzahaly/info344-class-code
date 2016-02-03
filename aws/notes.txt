@@ -1,0 +1,40 @@
+Launch new Instance
+-Choose the database engine that they support
+-After choice
+	-Select Dev/Test Options
+	Ignore/Pay Attention
+	-DB instance class
+		-How big of a machine you want
+			-Big machine cost money
+		-Go for micro (db.t2.micro -- 1vCPU, 1 GiB RAM)
+		-No need for Multi-AZ deployment (No)
+		-No need to allocate storage
+		-"Settings"
+			-Db Instance Identifier
+			-Master UserName = root (root account, the super user you sign in with to crete users, schemas, passwords)
+	Configure Advanced Settings	
+		-Default VPC (vpc-5c32af39)
+		-VPC Security Groups (Set of firewall settings)
+			-Allow connections by other machines
+			-Create New Security Groups
+		
+		
+Once it gets running (will say "available")
+	-Endpoint (Long domain name with port number)
+	
+	Connecting via workbench
+		-Remove port number from hostname in hostname
+		Use Master Username
+		
+Inbound Tab (firewall rules)
+-Edit (Add Rule) 
+
+Launching EC2
+-What operating system you want
+	-Use Ubunti 14.04
+	-Default is free(t2.micro)(Free tier eligible)
+	-pem file is plain text file
+	-This is the private key value associated with the public key value 
+	-Protect this, do not put into github repo
+	
+	
