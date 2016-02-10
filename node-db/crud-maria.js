@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 var mysql = require('mysql');
 var bluebird = require('bluebird');
 //load connection info

@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 //Javascript objects are hashmaps with a key and value pair.
 var express = require('express');
 var request = require('request');

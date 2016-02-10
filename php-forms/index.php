@@ -11,11 +11,18 @@ $appId = '2de143494c0b295cca9337e1e96b00e0';
 require_once 'connection.php';
 require_once 'models/zip-model.php';
 
-$q = $_GET['q'];
+
+if (isset($_GET['q'])) {
+    $q = $_GET['q'];   
+}
+else {
+    $q = '';
+}
 
 $conn = getConnection();
 $zipModel = new Zips($conn);
 $matches = $zipModel->search($q);
+
 
 //Getting data from an API.
 if (count($matches) == 1) {
@@ -25,6 +32,7 @@ if (count($matches) == 1) {
     $json = file_get_contents($url);
     $weatherData = json_decode($json);
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

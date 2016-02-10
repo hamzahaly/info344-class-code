@@ -1,6 +1,7 @@
 'use strict';
 
 var express = require('express');
+
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
@@ -26,5 +27,4 @@ app.use('/api/v1', storiesApi.Router(Story));
 app.listen(80, function() {
 	console.log('server is listening...');
 });
-
 

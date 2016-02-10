@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 var mongoose = require('mongoose');
 var dbConfig = require('./secret/config-mongo.json');
 

@@ -21,6 +21,7 @@ function foo($bar) {
 }
 
 echo "Hello {$name}!\n";
+
 foo(NULL);
 ?>
 And this is some content below

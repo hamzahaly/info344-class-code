@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 function getConnection() {
 	//variables in php file are local to this function.

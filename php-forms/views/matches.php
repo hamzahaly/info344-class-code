@@ -1,5 +1,6 @@
 <h1>Possible Matches</h1>
 <ul>
+
 	<?php foreach($matches as $match): ?>
 	<li>
 		<!-- ?= echoes the result of the expression -->
@@ -10,4 +11,5 @@
 		<?= htmlentities($match['country']) ?>
 	</li>
 	<?php endforeach; ?>
+
 </ul>
